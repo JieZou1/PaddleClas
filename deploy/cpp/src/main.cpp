@@ -93,7 +93,7 @@ int main(int argc, char **argv) {
 
         cv::cvtColor(srcimg, srcimg, cv::COLOR_BGR2RGB);
         classifier.Run(srcimg, out_data, result_index, cls_times);
-        if (label_output_equal_flag and out_data.size() != config.id_map.size()) {
+        if (label_output_equal_flag && out_data.size() != config.id_map.size()) {
             std::cout << "Warning: the label size is not equal to output size!"
                       << std::endl;
             label_output_equal_flag = false;
